@@ -14,7 +14,11 @@
   Then alert your name using dot notation.
 */
 
-//Code here
+const me = {
+  name: 'Tyler',
+  age: 36
+}
+alert(me.name)
 
 /// ////////////// PROBLEM 2 ///////////////////
 
@@ -23,21 +27,30 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band: 'Collective Soul',
+  food: 'Chicken Bacon Pesto Pizza',
+  person: 'Hash Slinging Slasher',
+  book: 'Writings and Things',
+  movie: 'How to Train your Dragon',
+  holiday: 'Christmas'
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
-//Code here
+favoriteThings.car = 'Honda CRV'
+favoriteThings.brand = 'Lego'
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
-//Code here
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings["book"] = 'Harry Potter'
 
 /// ////////////// PROBLEM 3 ///////////////////
 
