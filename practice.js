@@ -299,7 +299,18 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+  for (const val of employees) {
+    if (val.firstName === 'Theo') {
+      employees.splice(employees.indexOf(val), 1)
+    }
+    if (val.firstName === 'Lorie') {
+      val.department = 'HR'
+    }
+  }
+  return employees
+}
+
 
 /// ////////////// PROBLEM 16 ///////////////////
 
@@ -326,8 +337,8 @@ const cat = {
 */
 
 //Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0]['activities'][1];
+let fluffy2ndFriend = cat['catFriends'][1]['name'];
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -365,7 +376,12 @@ const myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  for (const index in myCar.accidents) {
+    myCar.accidents[index].atFaultForAccident = false
+  }
+  return myCar
+}
 
 /// ////////////// PROBLEM 18 ///////////////////
 
@@ -383,7 +399,21 @@ const myCar = {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({first, second, third}) {
+  if (first < second && first < third) {
+    return first
+  }
+  if (second < first && second < third) {
+    return second
+  }
+  return third
+}
+
+// Here's a way of writing this with ternary operators
+// function largeNumbers({first, second, third}) {
+//   return first > second ? first > third ? first : third 
+//     : second > third ? second : third
+// }
 
 /// ////////////// PROBLEM 19 ///////////////////
 
@@ -393,4 +423,18 @@ const myCar = {
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups({a, b, c}) {
+  if (a.length > b.length && a.length > c.length) {
+    return a
+  }
+  if (b.length > a.length && b.length > c.length) {
+    return b
+  }
+  return c
+}
+
+// once again, here is a version of this using ternary operators
+// function numberGroups({a, b, c}) {
+//   return a.length > b.length? a.length > c.length ? a : c
+//   : b.length > c.length ? b : c
+// }
