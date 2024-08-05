@@ -126,7 +126,11 @@ function double(obj) {
 */
 
 function showValues(obj) {
-  //Code Here
+  let conString = ""
+  for (const key in obj) {
+    conString += obj[key]
+  }
+  return conString
 }
 
 /// ////////////// PROBLEM 8 ///////////////////
@@ -137,7 +141,13 @@ function showValues(obj) {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode) {
+  const creditCard = {}
+  creditCard.cardNumber = cardNumber
+  creditCard.expirationDate = expirationDate
+  creditCard.securityCode = securityCode
+  return creditCard
+}
 
 /// ////////////// PROBLEM 9 ///////////////////
 
@@ -146,7 +156,10 @@ function showValues(obj) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj) {
+  delete obj.password
+  return obj
+}
 
 /// ////////////// PROBLEM 10 ///////////////////
 
