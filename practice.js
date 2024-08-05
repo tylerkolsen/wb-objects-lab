@@ -176,7 +176,11 @@ const deleteTheBigNumbers = {
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for (const key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key]
+  }
+}
 
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
@@ -201,7 +205,7 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -212,7 +216,7 @@ const carDetails = {
 */
 
 function greeting(obj) {
-  //Code Here
+  const {firstName, lastName, title} = obj
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -229,7 +233,10 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj) {
+  const {utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona
+}
 
 /// ////////////// PROBLEM 14 ///////////////////
 
@@ -241,7 +248,12 @@ function greeting(obj) {
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder([latitude, longitude]) {
+  if (latitude === 49 && -123 <= longitude && longitude <= -95) {
+    return true
+  } 
+  return false
+}
 
 /// ////////////// PROBLEM 15 ///////////////////
 
