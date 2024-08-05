@@ -71,7 +71,8 @@ const user2 = {
   Make that change without editing the code above.
 */
 
-//Code Here
+user2.name = "Bryan G. Smith"
+user2.email = 'bryan.smith@devmounta.in'
 
 /// ////////////// PROBLEM 4 ///////////////////
 
@@ -82,7 +83,9 @@ let shoppingCart = {};
   It should add a new key-value pair to the cart with the item and quantity.
 */
 
-//Code Here
+function addToCart(item, quantity) {
+  return shoppingCart[item] = quantity
+}
 
 /// ////////////// PROBLEM 5 ///////////////////
 
@@ -92,7 +95,14 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj) {
+  for (const key in obj) {
+    if (obj[key] > 10) {
+      obj[key] = 0
+    } 
+  }
+  return obj
+}
 
 /// ////////////// PROBLEM 6 ///////////////////
 
@@ -102,7 +112,12 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function double(obj) {
+  for(const key in obj) {
+    obj[key] *= 2
+  }
+  return obj
+}
 
 /// ////////////// PROBLEM 7 ///////////////////
 
